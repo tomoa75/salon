@@ -1,0 +1,99 @@
+@font-face {
+    font-family: 'artigo-pro';
+    src: url('fonts/artigo-pro-book.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+    font-family: 'artigo-pro', sans-serif; /* primarni font, fallback sans-serif */
+	background-color: #d2b48c; /* sonja htjela pozadina */
+	
+}
+
+.logo-inline {
+  width: 50px;
+  height: auto;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+}
+
+.logo-inline:hover {
+  transform:scale(1.2);
+  filter: brightness(1.2);       /* malo posvijetli */
+}
+
+
+.about {
+  padding: 50px 20px;
+  
+}
+
+.about h2 {
+    display: flex;
+    align-items: center;       /* vertikalno poravnanje */
+    justify-content: space-between; /* naslov lijevo, logo desno */
+}
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 18px;
+  text-align: justify;   /* rasporedi tekst s lijeve i desne strane */
+  text-justify: inter-word; /* bolja raspodjela riječi */
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.about-text i {
+  color: #006400;  /* tamno zelena */
+  margin-right: 8px;
+}
+
+.about-image {
+  flex: 1;
+  text-align: center;
+}
+
+.about-image img {
+  max-width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Mobilna verzija */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text h2 {
+    font-size: 26px;
+  }
+
+
+	
+	
+
+
+  .about-image {
+    margin-top: 20px;
+  }
+}
