@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'artigo-pro';
-    src: url('fonts/artigo-pro-book.otf') format('truetype');
+    src: fonts/'artigo-pro-book.otf format'('truetype');
     font-weight: normal;
     font-style: normal;
 }

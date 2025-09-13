@@ -9,7 +9,7 @@ window.addEventListener('load', function() {
                 // sekvencijalni delay: svaka slika malo kasni
                 setTimeout(() => {
                     img.classList.add('visible');
-                }, index * 200); // 0ms, 200ms, 400ms ...
+                }, index * 100); // 0ms, 200ms, 400ms ...
             }
         });
     }
