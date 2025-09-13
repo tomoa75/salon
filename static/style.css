@@ -1,7 +1,7 @@
 .fade-in {
     opacity: 0;
     transform: translateY(30px);
-    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
     will-change: opacity, transform; /* hint browseru */
 }
 
@@ -175,8 +175,7 @@ nav a:hover {
     transform: scale(1.1);
     color: #b38b59;
 }
-
-    .kontakt {
+ .kontakt {
       display: flex;
       align-items: center;
       gap: 20px;
@@ -356,8 +355,6 @@ nav a:hover {
   min-height: 35px;
   
   padding-top:  8px;
- 
-
 
 }
 
@@ -374,8 +371,11 @@ nav a:hover {
 		font-size: 10px;
     }
 		
-	
+ 
+
 }
+	
+
 
 button {
 	display: block;
@@ -525,6 +525,39 @@ input, textarea {
     font-size: 40px;
     color: white;
     cursor: pointer;
+}
+.gumb-povratak  {
+    display: inline-block;
+    padding: 10px 20px 15px 20px;
+    background-color: #5d4037;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 18px;
+    font-weight: bold;
+    transition: background 0.2s;
+    margin: 20px 0;
+    border: 1px solid #fff;
+    cursor: pointer;
+   
+}
+
+.gumb-povratak:hover {
+    background-color: #421f0ae5;
+}
+@media (max-width: 600px) {
+  .gumb-povratak{
+    display: block;
+    width: 90%;
+    max-width: 400px;
+    margin: 24px auto;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 18px 0 14px 0;
+    border-radius: 20px;
+    max-width: 250px ;
+    position: relative; /* dodano za z-index */
+    z-index: 9999;        /* gumb će biti iznad ostalih elemenata */
+  }
 }
 
 
