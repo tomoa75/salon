@@ -444,7 +444,10 @@ input, textarea {
 @media (max-width: 1020px) and (min-width: 769px) {
  
  .gallery {
+    display: grid;
     grid-template-columns: repeat(2, 1fr); /* na tabletima po 2 */
+    column-count: unset; /* uklanja masonry efekt */
+    gap: 15px; /* razmak između slika */
   }
   .nav-links.show {
         display: flex;
@@ -462,7 +465,10 @@ input, textarea {
 }
 @media (max-width: 600px) {
   .gallery {
+    display: grid;
     grid-template-columns: 1fr; /* na mobitelu po 1 */
+    column-count: unset; /* uklanja masonry efekt */
+    gap: 15px; /* razmak između slika */
   }
 }
 .gallery {
