@@ -441,16 +441,6 @@ input, textarea {
     text-align: center;
 }
 
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    max-width: 900px;
-    margin: 20px auto;
-	background-color:#d2b48c;
-	background-size: cover;
-    background-position: center;
-}
 @media (max-width: 1020px) and (min-width: 769px) {
  
  .gallery {
@@ -475,16 +465,33 @@ input, textarea {
     grid-template-columns: 1fr; /* na mobitelu po 1 */
   }
 }
+.gallery {
+    column-count: 3;            /* broj stupaca */
+    column-gap: 15px;           /* razmak između stupaca */
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: #d2b48c;
+    background-size: cover;
+    background-position: center;
+}
 
 .gallery img {
     width: 100%;
+    margin-bottom: 15px;
+    border-radius: 8px;
     cursor: pointer;
-    border-radius: 8px;   
+    display: block;
+    break-inside: avoid;        /* sprječava ružno lomljenje u masonry layoutu */
+    transition: transform 0.5s ease;
 }
+
 .gallery img:hover {
-    transform: scale(1.50);
-	transition: 0.7s;
+    transform: scale(1.08);     /* lagano povećanje (manje nego prije da ne "iskače") */
+    z-index: 2;                 /* slika ide iznad ostalih kad se poveća */
+    position: relative;
 }
+
+
 .zoom-img {
 
   
@@ -559,7 +566,6 @@ input, textarea {
     z-index: 9999;        /* gumb će biti iznad ostalih elemenata */
   }
 }
-
 
 
 
