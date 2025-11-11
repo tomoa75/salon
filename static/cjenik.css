@@ -1,0 +1,88 @@
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 10px 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 5px;
+      font-size: 4rem;
+	 
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: linear-gradient(145deg, #6d4c41, #5d3a2e);
+      border-radius: 20px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+      padding: 20px;
+	  position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+	  color: #fff;
+    }
+	.card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at center, rgba(255, 230, 200, 0.3), transparent 70%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+
+    .card:hover::before {
+      opacity: 0.5;
+    }
+
+    .card:hover {
+      transform: translateY(-6px) scale(1.02);
+	  box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+    }
+    .card h2 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      background: linear-gradient(45deg, #ffe0b2, #ffcc80); /* topao pastelni gradient */
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.3); /* lagani sjaj/izdignutost */
+    }
+    .card p {
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+      line-height: 1.4;
+	  color: #f3e5e0;
+    }
+    .prices {
+      border: 1px solid #eee;
+      border-radius: 12px;
+      overflow: hidden;
+	  background: rgba(255,255,255,0.1);
+    }
+    .prices table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+	  color: #fff;
+    }
+    .prices th, .prices td {
+      padding: 8px 12px;
+      text-align: left;
+    }
+    .prices tr:nth-child(even) {
+      background: rgba(255,255,255,0.1);
+    }
+    .note {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #5d4037;
+    }

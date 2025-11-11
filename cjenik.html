@@ -1,224 +1,214 @@
 <!DOCTYPE html>
 <html lang="hr">
-<head>
-  <link rel="stylesheet" href="static/style.css">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="noindex, follow">
+  <head>
+    <link rel="stylesheet" href="static/style.css" />
+    <link rel="stylesheet" href="static/cjenik.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Pogledajte naš aktualni cjenik usluga. Transparentne i konkurentne cijene za masaže."
+    />
+    <link rel="icon" type="image/png" href="/static/limages/logoz1.png" />
     <title>Cjenik masaža</title>
-  <style>
- 
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 10px 20px;
-    }
-    h1 {
-      text-align: center;
-      margin-bottom: 5px;
-      font-size: 4rem;
-	 
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-    .card {
-      background: linear-gradient(145deg, #6d4c41, #5d3a2e);
-      border-radius: 20px;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-      padding: 20px;
-	  position: relative;
-      overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-	  color: #fff;
-    }
-	.card::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle at center, rgba(255, 230, 200, 0.3), transparent 70%);
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      pointer-events: none;
-    }
+  </head>
+  <body>
+    <div class="container">
+      <h1>Soleus Massage</h1>
 
-    .card:hover::before {
-      opacity: 0.5;
-    }
+      <p class="cjenik">Cjenik/Price List</p>
+      <div class="grid">
+        <!-- Relax Masaža -->
+        <div class="card">
+          <h2>Relax Masaža / Relax Massage</h2>
+          <p>
+            Nježna i opuštajuća masaža cijelog tijela koja smanjuje stres i
+            vraća unutarnju ravnotežu.
+          </p>
+          <div class="prices">
+            <table>
+              <tr>
+                <td>30 minuta</td>
+                <td>25 €</td>
+              </tr>
+              <tr>
+                <td>45 minuta</td>
+                <td>35 €</td>
+              </tr>
+              <tr>
+                <td>60 minuta</td>
+                <td>40 €</td>
+              </tr>
+            </table>
+          </div>
+        </div>
 
-    .card:hover {
-      transform: translateY(-6px) scale(1.02);
-	  box-shadow: 0 12px 24px rgba(0,0,0,0.3);
-    }
-    .card h2 {
-      font-size: 1.3rem;
-      margin-bottom: 10px;
-      background: linear-gradient(45deg, #ffe0b2, #ffcc80); /* topao pastelni gradient */
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.3); /* lagani sjaj/izdignutost */
-    }
-    .card p {
-      font-size: 0.9rem;
-      margin-bottom: 10px;
-      line-height: 1.4;
-	  color: #f3e5e0;
-    }
-    .prices {
-      border: 1px solid #eee;
-      border-radius: 12px;
-      overflow: hidden;
-	  background: rgba(255,255,255,0.1);
-    }
-    .prices table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.9rem;
-	  color: #fff;
-    }
-    .prices th, .prices td {
-      padding: 8px 12px;
-      text-align: left;
-    }
-    .prices tr:nth-child(even) {
-      background: rgba(255,255,255,0.1);
-    }
-    .note {
-      margin-top: 40px;
-      text-align: center;
-      font-size: 0.8rem;
-      color: #5d4037;
-    }
+        <!-- Medicinska Masaža -->
+        <div class="card">
+          <h2>Medicinska Masaža / Medical Massage</h2>
+          <p>
+            Terapijska masaža usmjerena na bolne i napete dijelove tijela s
+            ciljem olakšanja i rehabilitacije.
+          </p>
+          <div class="prices">
+            <table>
+              <tr>
+                <td>30 minuta</td>
+                <td>27 €</td>
+              </tr>
+              <tr>
+                <td>45 minuta</td>
+                <td>37 €</td>
+              </tr>
+              <tr>
+                <td>60 minuta</td>
+                <td>45 €</td>
+              </tr>
+            </table>
+          </div>
+        </div>
 
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>
-	Soleus Massage	 
-	</h1>
-  
-	<p class="cjenik">Cjenik/Price List</p>
-    <div class="grid">
-      
-      <!-- Relax Masaža -->
-      <div class="card">
-        <h2>Relax Masaža / Relax Massage</h2>
-        <p>Nježna i opuštajuća masaža cijelog tijela koja smanjuje stres i vraća unutarnju ravnotežu.</p>
-        <div class="prices">
-          <table>
-            <tr><td>30 minuta</td><td>25 €</td></tr>
-            <tr><td>45 minuta</td><td>35 €</td></tr>
-            <tr><td>60 minuta</td><td>40 €</td></tr>
-          </table>
+        <!-- Sportska Masaža -->
+        <div class="card">
+          <h2>Sportska Masaža / Sport Massage</h2>
+          <p>
+            Intenzivna masaža za sportaše i aktivne osobe koja ubrzava oporavak
+            mišića i poboljšava fleksibilnost.
+          </p>
+          <div class="prices">
+            <table>
+              <tr>
+                <td>30 minuta</td>
+                <td>30 €</td>
+              </tr>
+              <tr>
+                <td>45 minuta</td>
+                <td>40 €</td>
+              </tr>
+              <tr>
+                <td>60 minuta</td>
+                <td>50 €</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- Luxury mix Masaža -->
+        <div class="card">
+          <h2>Luxury mix Masaža cijelog tijela / Whole body</h2>
+          <p>
+            Kombinacija različitih tehnika masaže za potpuni luksuzni doživljaj
+            i duboko opuštanje.
+          </p>
+          <div class="prices">
+            <table>
+              <tr>
+                <td>60 minuta</td>
+                <td>55 €</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- Masaža Stopala -->
+        <div class="card">
+          <h2>Masaža Stopala / Foot Massage</h2>
+          <p>
+            Refleksološka masaža stopala koja poboljšava cirkulaciju i oslobađa
+            tijelo od napetosti.
+          </p>
+          <div class="prices">
+            <table>
+              <tr>
+                <td>20 minuta</td>
+                <td>25 €</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- Buccal Masaža -->
+        <div class="card">
+          <h2>Buccal Masaža, lice / Buccal Massage, face</h2>
+          <p>
+            Posebna tehnika masaže lica koja poboljšava tonus kože i pomaže u
+            oblikovanju kontura lica.
+          </p>
+          <div class="prices">
+            <table>
+              <tr>
+                <td>30 minuta</td>
+                <td>35 €</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- Masaža tjemena, lica i vrata -->
+        <div class="card">
+          <h2>Masaža Tjemena, lica i vrata / Scalp, face & neck massage</h2>
+          <p>
+            Umirujuća masaža koja uklanja napetost glave i vrata te potiče
+            osjećaj lakoće.
+          </p>
+          <div class="prices">
+            <table>
+              <tr>
+                <td>30 minuta</td>
+                <td>30 €</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- Aroma Masaža -->
+        <div class="card">
+          <h2>Aroma Masaža / Aroma Massage</h2>
+          <p>
+            Opuštajuća masaža uz upotrebu aromatičnih ulja za smanjenje stresa i
+            balans uma i tijela.
+          </p>
+          <div class="prices">
+            <table>
+              <tr>
+                <td>30 minuta</td>
+                <td>27 €</td>
+              </tr>
+              <tr>
+                <td>45 minuta</td>
+                <td>37 €</td>
+              </tr>
+              <tr>
+                <td>60 minuta</td>
+                <td>42 €</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- Relax Day -->
+        <div class="card">
+          <h2>Relax Day</h2>
+          <p>
+            Paket masaža za troje u trajanju od 40 minuta po osobi uz zajedničko
+            druženje i napitak dobrodošlice za potpuno oslobađanje od stresa.
+          </p>
+          <div class="prices">
+            <table>
+              <tr>
+                <td>Paket</td>
+                <td>150 €</td>
+              </tr>
+            </table>
+          </div>
         </div>
       </div>
-      
-      <!-- Medicinska Masaža -->
-      <div class="card">
-        <h2>Medicinska Masaža / Medical Massage</h2>
-        <p>Terapijska masaža usmjerena na bolne i napete dijelove tijela s ciljem olakšanja i rehabilitacije.</p>
-        <div class="prices">
-          <table>
-            <tr><td>30 minuta</td><td>27 €</td></tr>
-            <tr><td>45 minuta</td><td>37 €</td></tr>
-            <tr><td>60 minuta</td><td>45 €</td></tr>
-          </table>
-        </div>
-      </div>
-      
-      <!-- Sportska Masaža -->
-      <div class="card">
-        <h2>Sportska Masaža / Sport Massage</h2>
-        <p>Intenzivna masaža za sportaše i aktivne osobe koja ubrzava oporavak mišića i poboljšava fleksibilnost.</p>
-        <div class="prices">
-          <table>
-            <tr><td>30 minuta</td><td>30 €</td></tr>
-            <tr><td>45 minuta</td><td>40 €</td></tr>
-            <tr><td>60 minuta</td><td>50 €</td></tr>
-          </table>
-        </div>
-      </div>
-      
-      <!-- Luxury mix Masaža -->
-      <div class="card">
-        <h2>Luxury mix Masaža cijelog tijela / Whole body</h2>
-        <p>Kombinacija različitih tehnika masaže za potpuni luksuzni doživljaj i duboko opuštanje.</p>
-        <div class="prices">
-          <table>
-            <tr><td>60 minuta</td><td>55 €</td></tr>
-          </table>
-        </div>
-      </div>
-      
-      <!-- Masaža Stopala -->
-      <div class="card">
-        <h2>Masaža Stopala / Foot Massage</h2>
-        <p>Refleksološka masaža stopala koja poboljšava cirkulaciju i oslobađa tijelo od napetosti.</p>
-        <div class="prices">
-          <table>
-            <tr><td>20 minuta</td><td>25 €</td></tr>
-          </table>
-        </div>
-      </div>
-      
-      <!-- Buccal Masaža -->
-      <div class="card">
-        <h2>Buccal Masaža, lice / Buccal Massage, face</h2>
-        <p>Posebna tehnika masaže lica koja poboljšava tonus kože i pomaže u oblikovanju kontura lica.</p>
-        <div class="prices">
-          <table>
-            <tr><td>30 minuta</td><td>35 €</td></tr>
-          </table>
-        </div>
-      </div>
-      
-      <!-- Masaža tjemena, lica i vrata -->
-      <div class="card">
-        <h2>Masaža Tjemena, lica i vrata / Scalp, face & neck massage</h2>
-        <p>Umirujuća masaža koja uklanja napetost glave i vrata te potiče osjećaj lakoće.</p>
-        <div class="prices">
-          <table>
-            <tr><td>30 minuta</td><td>30 €</td></tr>
-          </table>
-        </div>
-      </div>
-      
-      <!-- Aroma Masaža -->
-      <div class="card">
-        <h2>Aroma Masaža / Aroma Massage</h2>
-        <p>Opuštajuća masaža uz upotrebu aromatičnih ulja za smanjenje stresa i balans uma i tijela.</p>
-        <div class="prices">
-          <table>
-            <tr><td>30 minuta</td><td>27 €</td></tr>
-            <tr><td>45 minuta</td><td>37 €</td></tr>
-            <tr><td>60 minuta</td><td>42 €</td></tr>
-          </table>
-        </div>
-      </div>
-      
-      <!-- Relax Day -->
-      <div class="card">
-        <h2>Relax Day</h2>
-        <p> Paket masaža za troje u trajanju od 40 minuta po osobi uz zajedničko druženje i napitak dobrodošlice  za potpuno oslobađanje od stresa.</p>
-        <div class="prices">
-          <table>
-            <tr><td>Paket</td><td>150 €</td></tr>
-          </table>
-        </div>
-      </div>
-      
+
+      <!--* Cijene su informativne i iskazane u eurima. Moguće su promjene bez prethodne najave.-->
+      <p class="note">
+        Soleus M,Obrt za Usluge,Obala Kralja Tomislava 1,Kaštel Stari
+      </p>
+      <a href="index.html" class="gumb-povratak">Povratak na početnu</a>
     </div>
-    
-    <!--* Cijene su informativne i iskazane u eurima. Moguće su promjene bez prethodne najave.-->
-	<p class="note">Soleus M,Obrt za Usluge,Obala Kralja Tomislava 1,Kaštel Stari</p>
-  <a href="index.html" class="gumb-povratak">Povratak na početnu</a>
-  </div>
- 
-</body>
+  </body>
 </html>
