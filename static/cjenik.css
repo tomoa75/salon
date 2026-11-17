@@ -12,7 +12,7 @@
     }
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
       gap: 20px;
     }
     .card {
@@ -85,4 +85,50 @@
       text-align: center;
       font-size: 0.8rem;
       color: #5d4037;
+    }
+
+    .price-info {
+      margin: 24px 0 32px;
+      padding: 22px;
+      border: 1px solid #80604d;
+      border-radius: 16px;
+      background: #f7ecdf;
+      color: #493025;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .price-info p { margin: 0 0 12px; }
+    .csv-link {
+      display: inline-block;
+      margin: 4px;
+      padding: 10px 16px;
+      border: 2px solid #5d3a2e;
+      border-radius: 8px;
+      background: #5d3a2e;
+      color: #fff;
+      font-size: 1rem;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .csv-download { background: transparent; color: #493025; }
+    .csv-link:focus-visible { outline: 3px solid #493025; outline-offset: 4px; }
+    .card { min-width: 0; }
+    .prices th { background: #493025; font-weight: 600; line-height: 1.4; }
+    .prices th, .prices td { padding: 10px 7px; }
+    .prices td:not(:first-child) { white-space: nowrap; font-variant-numeric: tabular-nums; }
+    .prices th:not(:first-child), .prices td:not(:first-child) { text-align: right; }
+    .base-date { display: inline-block; white-space: nowrap; font-weight: normal; }
+    @media (max-width: 400px) {
+      .container { padding: 10px 12px; }
+      h1 { font-size: 2.5rem; }
+      .container .cjenik { font-size: 2rem; }
+      .card { padding: 14px; }
+      .prices table { font-size: 0.82rem; }
+    }
+    @media print {
+      .csv-link, .gumb-povratak { display: none; }
+      .card { break-inside: avoid; box-shadow: none; background: white; color: black; }
+      .card h2 { background: none; -webkit-text-fill-color: black; text-shadow: none; }
+      .card p, .prices table { color: black; }
+      .prices th { background: #eee; }
     }
